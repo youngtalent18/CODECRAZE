@@ -5,4 +5,4 @@ services:
     plan: free
     branch: Code_Python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn password:app"
+    startCommand: "gunicorn password:app --bind 0.0.0.0:$PORT"
