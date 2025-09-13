@@ -4,5 +4,5 @@ services:
     runtime: python
     plan: free
     branch: Code_Python
-    buildCommand: "pip install -r requirements.txt"
+    buildCommand: "pip install -r requirements.txt.txt"
     startCommand: "gunicorn password:app"
