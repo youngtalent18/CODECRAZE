@@ -1,9 +1,8 @@
 services:
   - type: web
     name: codecraze-anti
-    env: python
+    runtime: python
+    plan: free
+    branch: Code_Python
     buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn password:app"
-    plan: free
-    branch: origin
-    runtime: python
