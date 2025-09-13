@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: codecraze-anti
+    name: password
     runtime: python
     plan: free
     branch: Code_Python
