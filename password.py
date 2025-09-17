@@ -17,7 +17,7 @@ def generate_password(length=16, use_upper=True, use_lower=True, use_digits=True
         chars += string.punctuation
 
     if not chars:
-        # return characters as default
+        # prompt the user
         return "You must choose at least a character"
 
     password = ''.join(secrets.choice(chars) for _ in range(length))
@@ -31,7 +31,7 @@ def index():
 def api_generate():
     data = request.json or {}
 
-    length = data.get('length', 16)
+    length = data.get('length', 12)
     use_upper = data.get('use_upper', True)
     use_lower = data.get('use_lower', True)
     use_digits = data.get('use_digits', True)
@@ -43,8 +43,8 @@ def api_generate():
     except (ValueError, TypeError):
         return jsonify({"error": "Invalid length"}), 400
 
-    if length < 4 or length > 128:
-        return jsonify({"error": "Length must be between 4 and 128"}), 400
+    if length < 10 or length > 50:
+        return jsonify({"error": "Length must be between 10 and 50"}), 400
 
     pwd = generate_password(length, use_upper, use_lower, use_digits, use_special)
     return jsonify({"password": pwd})
