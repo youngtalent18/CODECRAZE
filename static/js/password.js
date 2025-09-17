@@ -1,6 +1,5 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('pwd-form');
     const resultDiv = document.getElementById('password');
     const copyBtn = document.getElementById('copy-btn');
     const lengthSlider = document.getElementById('length');
