@@ -45,7 +45,7 @@ def api_generate():
     except (ValueError, TypeError):
         return jsonify({"error": "Invalid length"}), 400
 
-    if length < 4 or length > 128:
+    if length < 10 or length > 50:
         return jsonify({"error": "Length must be between 4 and 128"}), 400
 
     pwd = generate_password(length, use_upper, use_lower, use_digits, use_special)
