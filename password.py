@@ -6,9 +6,6 @@ import string
 app = Flask(__name__)
 
 def generate_password(length=16, use_upper=True, use_lower=True, use_digits=True, use_special=True):
-    """
-    Generate a password using cryptographically secure randomness
-    """
     chars = ''
     if use_upper:
         chars += string.ascii_uppercase
