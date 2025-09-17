@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyBtn = document.getElementById('copy-btn');
     const lengthSlider = document.getElementById('length');
     const lengthDisplay = document.getElementById('length-container');
-    const generateBtn = document.getElementById('generate-btn'); // NEW
+    const generateBtn = document.getElementById('generate-btn'); 
 
     // Show length value live
     lengthSlider.addEventListener('input', () => {
